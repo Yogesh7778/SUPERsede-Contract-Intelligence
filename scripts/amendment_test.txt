@@ -1,0 +1,23 @@
+
+AMENDMENT AGREEMENT
+
+Agreement ID: AGR-001
+Contract ID: CTR-001
+Project ID: PROJ-101
+Service Scope: Software Development
+Amends Agreement: AGR-001
+
+First Party: ABC Technologies
+Second Party: XYZ Solutions
+
+Effective Date: 2026-06-01
+Status: Signed
+
+1. Definitions
+This amendment modifies the original service agreement.
+
+2. Payment Terms
+The customer shall pay INR 60,000 every month.
+
+3. Confidentiality
+Both parties shall maintain confidentiality of all shared information.

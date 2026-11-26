@@ -1,0 +1,592 @@
+{
+  "protocol": "Evidence spans center positive examples; no-evidence documents use coverage windows with conservative document aggregation. This is an approximation of document-level ContractNLI.",
+  "model": "models/checkpoints/contractnli-deberta-mps-balanced-96",
+  "device": "mps",
+  "max_length": 256,
+  "split": "test",
+  "records": 2091,
+  "metrics": {
+    "accuracy": 0.5179340028694405,
+    "macro_precision": 0.5100748325280278,
+    "macro_recall": 0.5657602909188534,
+    "macro_f1": 0.49408472216121874,
+    "weighted_f1": 0.5367824087023809,
+    "per_class": {
+      "Entailment": {
+        "precision": 0.7253086419753086,
+        "recall": 0.4855371900826446,
+        "f1": 0.5816831683168316,
+        "support": 968
+      },
+      "Contradiction": {
+        "precision": 0.252442996742671,
+        "recall": 0.7045454545454546,
+        "f1": 0.37170263788968827,
+        "support": 220
+      },
+      "NotMentioned": {
+        "precision": 0.5524728588661038,
+        "recall": 0.5071982281284607,
+        "f1": 0.5288683602771362,
+        "support": 903
+      }
+    },
+    "classification_report": {
+      "Entailment": {
+        "precision": 0.7253086419753086,
+        "recall": 0.4855371900826446,
+        "f1-score": 0.5816831683168316,
+        "support": 968.0
+      },
+      "Contradiction": {
+        "precision": 0.252442996742671,
+        "recall": 0.7045454545454546,
+        "f1-score": 0.37170263788968827,
+        "support": 220.0
+      },
+      "NotMentioned": {
+        "precision": 0.5524728588661038,
+        "recall": 0.5071982281284607,
+        "f1-score": 0.5288683602771362,
+        "support": 903.0
+      },
+      "accuracy": 0.5179340028694405,
+      "macro avg": {
+        "precision": 0.5100748325280278,
+        "recall": 0.5657602909188534,
+        "f1-score": 0.49408472216121874,
+        "support": 2091.0
+      },
+      "weighted avg": {
+        "precision": 0.6009178461365748,
+        "recall": 0.5179340028694405,
+        "f1-score": 0.5367824087023809,
+        "support": 2091.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        470,
+        176,
+        322
+      ],
+      [
+        16,
+        155,
+        49
+      ],
+      [
+        162,
+        283,
+        458
+      ]
+    ],
+    "labels": [
+      "Entailment",
+      "Contradiction",
+      "NotMentioned"
+    ]
+  },
+  "misclassified": [
+    {
+      "example_id": "contractnli_test_1_nda-16",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_1_nda-20",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_1_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_1_nda-5",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-12",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-20",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-8",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_2_nda-4",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-16",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-15",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-10",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-2",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-12",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-7",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-8",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-13",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_4_nda-5",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-16",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-15",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-10",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-2",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-19",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-12",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-17",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-13",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_5_nda-4",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-15",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-10",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-20",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_6_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-15",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-2",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-12",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-7",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_8_nda-8",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-16",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-10",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-19",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-12",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-8",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_11_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-15",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-10",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-19",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-12",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-3",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-18",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-7",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_test_18_nda-13",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-10",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-12",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-20",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-8",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_21_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-2",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-1",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-12",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-8",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_22_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-16",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-10",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-12",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-20",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-17",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-13",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_23_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-10",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-12",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-3",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-8",
+      "prediction": "Entailment",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_24_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_test_25_nda-15",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    }
+  ]
+}

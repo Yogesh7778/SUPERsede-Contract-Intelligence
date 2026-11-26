@@ -1,0 +1,239 @@
+{
+  "task": "ContractNLI document-level evaluation with evidence-aware windows",
+  "test_split": "untouched predefined test split",
+  "records": 2091,
+  "methodology": "Evidence spans center positive examples; no-evidence documents use coverage windows with conservative document aggregation. This is an approximation of document-level ContractNLI.",
+  "baseline": {
+    "accuracy": 0.38880918220946914,
+    "macro_precision": 0.4404708462889178,
+    "macro_recall": 0.3892749604166095,
+    "macro_f1": 0.341539919399936,
+    "weighted_f1": 0.37792786921771654,
+    "per_class": {
+      "Entailment": {
+        "precision": 0.754863813229572,
+        "recall": 0.20041322314049587,
+        "f1": 0.31673469387755104,
+        "support": 968
+      },
+      "Contradiction": {
+        "precision": 0.164,
+        "recall": 0.37272727272727274,
+        "f1": 0.22777777777777777,
+        "support": 220
+      },
+      "NotMentioned": {
+        "precision": 0.4025487256371814,
+        "recall": 0.5946843853820598,
+        "f1": 0.4801072865444792,
+        "support": 903
+      }
+    },
+    "classification_report": {
+      "Entailment": {
+        "precision": 0.754863813229572,
+        "recall": 0.20041322314049587,
+        "f1-score": 0.31673469387755104,
+        "support": 968.0
+      },
+      "Contradiction": {
+        "precision": 0.164,
+        "recall": 0.37272727272727274,
+        "f1-score": 0.22777777777777777,
+        "support": 220.0
+      },
+      "NotMentioned": {
+        "precision": 0.4025487256371814,
+        "recall": 0.5946843853820598,
+        "f1-score": 0.4801072865444792,
+        "support": 903.0
+      },
+      "accuracy": 0.38880918220946914,
+      "macro avg": {
+        "precision": 0.4404708462889178,
+        "recall": 0.3892749604166095,
+        "f1-score": 0.341539919399936,
+        "support": 2091.0
+      },
+      "weighted avg": {
+        "precision": 0.5405498184871356,
+        "recall": 0.38880918220946914,
+        "f1-score": 0.37792786921771654,
+        "support": 2091.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        194,
+        105,
+        669
+      ],
+      [
+        10,
+        82,
+        128
+      ],
+      [
+        53,
+        313,
+        537
+      ]
+    ],
+    "labels": [
+      "Entailment",
+      "Contradiction",
+      "NotMentioned"
+    ]
+  },
+  "fine_tuned": {
+    "accuracy": 0.5179340028694405,
+    "macro_precision": 0.5100748325280278,
+    "macro_recall": 0.5657602909188534,
+    "macro_f1": 0.49408472216121874,
+    "weighted_f1": 0.5367824087023809,
+    "per_class": {
+      "Entailment": {
+        "precision": 0.7253086419753086,
+        "recall": 0.4855371900826446,
+        "f1": 0.5816831683168316,
+        "support": 968
+      },
+      "Contradiction": {
+        "precision": 0.252442996742671,
+        "recall": 0.7045454545454546,
+        "f1": 0.37170263788968827,
+        "support": 220
+      },
+      "NotMentioned": {
+        "precision": 0.5524728588661038,
+        "recall": 0.5071982281284607,
+        "f1": 0.5288683602771362,
+        "support": 903
+      }
+    },
+    "classification_report": {
+      "Entailment": {
+        "precision": 0.7253086419753086,
+        "recall": 0.4855371900826446,
+        "f1-score": 0.5816831683168316,
+        "support": 968.0
+      },
+      "Contradiction": {
+        "precision": 0.252442996742671,
+        "recall": 0.7045454545454546,
+        "f1-score": 0.37170263788968827,
+        "support": 220.0
+      },
+      "NotMentioned": {
+        "precision": 0.5524728588661038,
+        "recall": 0.5071982281284607,
+        "f1-score": 0.5288683602771362,
+        "support": 903.0
+      },
+      "accuracy": 0.5179340028694405,
+      "macro avg": {
+        "precision": 0.5100748325280278,
+        "recall": 0.5657602909188534,
+        "f1-score": 0.49408472216121874,
+        "support": 2091.0
+      },
+      "weighted avg": {
+        "precision": 0.6009178461365748,
+        "recall": 0.5179340028694405,
+        "f1-score": 0.5367824087023809,
+        "support": 2091.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        470,
+        176,
+        322
+      ],
+      [
+        16,
+        155,
+        49
+      ],
+      [
+        162,
+        283,
+        458
+      ]
+    ],
+    "labels": [
+      "Entailment",
+      "Contradiction",
+      "NotMentioned"
+    ]
+  },
+  "delta": {
+    "accuracy": 0.12912482065997133,
+    "macro_precision": 0.06960398623910996,
+    "macro_recall": 0.1764853305022439,
+    "macro_f1": 0.15254480276128274,
+    "weighted_f1": 0.15885453948466438
+  },
+  "error_analysis": {
+    "baseline": [
+      {
+        "actual": "Entailment",
+        "predicted": "NotMentioned",
+        "count_in_saved_first_100_errors": 46
+      },
+      {
+        "actual": "NotMentioned",
+        "predicted": "Contradiction",
+        "count_in_saved_first_100_errors": 35
+      },
+      {
+        "actual": "Contradiction",
+        "predicted": "NotMentioned",
+        "count_in_saved_first_100_errors": 10
+      },
+      {
+        "actual": "Entailment",
+        "predicted": "Contradiction",
+        "count_in_saved_first_100_errors": 5
+      },
+      {
+        "actual": "NotMentioned",
+        "predicted": "Entailment",
+        "count_in_saved_first_100_errors": 4
+      }
+    ],
+    "fine_tuned": [
+      {
+        "actual": "Entailment",
+        "predicted": "NotMentioned",
+        "count_in_saved_first_100_errors": 32
+      },
+      {
+        "actual": "NotMentioned",
+        "predicted": "Contradiction",
+        "count_in_saved_first_100_errors": 29
+      },
+      {
+        "actual": "NotMentioned",
+        "predicted": "Entailment",
+        "count_in_saved_first_100_errors": 18
+      },
+      {
+        "actual": "Entailment",
+        "predicted": "Contradiction",
+        "count_in_saved_first_100_errors": 16
+      },
+      {
+        "actual": "Contradiction",
+        "predicted": "NotMentioned",
+        "count_in_saved_first_100_errors": 5
+      }
+    ],
+    "interpretation": "The fine-tuned checkpoint improves recall for Contradiction but has low contradiction precision; it still over-flags contradictions for some NotMentioned documents. Review the saved misclassified IDs with source data before legal use."
+  },
+  "limitations": [
+    "Fine-tuning used a small, balanced 96-document CPU/MPS-safe subset, not the full training split.",
+    "No test labels were used in selection or training.",
+    "Evidence contexts and multiple-instance pooling are an approximation to original whole-contract ContractNLI evaluation."
+  ]
+}

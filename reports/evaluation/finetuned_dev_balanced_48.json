@@ -1,0 +1,162 @@
+{
+  "protocol": "Evidence spans center positive examples; no-evidence documents use coverage windows with conservative document aggregation. This is an approximation of document-level ContractNLI.",
+  "model": "models/checkpoints/contractnli-deberta-mps-balanced-96",
+  "device": "mps",
+  "max_length": 256,
+  "split": "dev",
+  "records": 48,
+  "metrics": {
+    "accuracy": 0.7083333333333334,
+    "macro_precision": 0.7199597787833082,
+    "macro_recall": 0.7083333333333334,
+    "macro_f1": 0.7103899030876719,
+    "weighted_f1": 0.7103899030876719,
+    "per_class": {
+      "Entailment": {
+        "precision": 0.8461538461538461,
+        "recall": 0.6875,
+        "f1": 0.7586206896551724,
+        "support": 16
+      },
+      "Contradiction": {
+        "precision": 0.6470588235294118,
+        "recall": 0.6875,
+        "f1": 0.6666666666666666,
+        "support": 16
+      },
+      "NotMentioned": {
+        "precision": 0.6666666666666666,
+        "recall": 0.75,
+        "f1": 0.7058823529411765,
+        "support": 16
+      }
+    },
+    "classification_report": {
+      "Entailment": {
+        "precision": 0.8461538461538461,
+        "recall": 0.6875,
+        "f1-score": 0.7586206896551724,
+        "support": 16.0
+      },
+      "Contradiction": {
+        "precision": 0.6470588235294118,
+        "recall": 0.6875,
+        "f1-score": 0.6666666666666666,
+        "support": 16.0
+      },
+      "NotMentioned": {
+        "precision": 0.6666666666666666,
+        "recall": 0.75,
+        "f1-score": 0.7058823529411765,
+        "support": 16.0
+      },
+      "accuracy": 0.7083333333333334,
+      "macro avg": {
+        "precision": 0.7199597787833082,
+        "recall": 0.7083333333333334,
+        "f1-score": 0.7103899030876719,
+        "support": 48.0
+      },
+      "weighted avg": {
+        "precision": 0.7199597787833082,
+        "recall": 0.7083333333333334,
+        "f1-score": 0.7103899030876719,
+        "support": 48.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        11,
+        2,
+        3
+      ],
+      [
+        2,
+        11,
+        3
+      ],
+      [
+        0,
+        4,
+        12
+      ]
+    ],
+    "labels": [
+      "Entailment",
+      "Contradiction",
+      "NotMentioned"
+    ]
+  },
+  "misclassified": [
+    {
+      "example_id": "contractnli_dev_598_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_9_nda-4",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_406_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_29_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_54_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_488_nda-8",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_44_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_9_nda-5",
+      "prediction": "Entailment",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_20_nda-17",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_28_nda-2",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_575_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_411_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_20_nda-7",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_478_nda-1",
+      "prediction": "Entailment",
+      "label": "Contradiction"
+    }
+  ]
+}

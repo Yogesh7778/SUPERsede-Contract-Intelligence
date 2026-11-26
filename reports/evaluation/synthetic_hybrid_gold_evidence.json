@@ -1,0 +1,3206 @@
+{
+  "protocol": "Gold-evidence synthetic reasoning evaluation. It uses annotation-provided evidence pairs, so it measures NLI/reasoning conditional on correct retrieval, not end-to-end clause localization.",
+  "records": 60,
+  "labels": [
+    "CONFLICT",
+    "SUPERSEDED",
+    "CONSISTENT",
+    "UNCERTAIN"
+  ],
+  "accuracy": 0.38333333333333336,
+  "macro_precision": 0.4227941176470588,
+  "macro_recall": 0.35,
+  "macro_f1": 0.3468988638480164,
+  "per_class": {
+    "CONFLICT": {
+      "precision": 0.25,
+      "recall": 0.4,
+      "f1": 0.3076923076923077,
+      "support": 15
+    },
+    "SUPERSEDED": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285714,
+      "support": 5
+    },
+    "CONSISTENT": {
+      "precision": 0.4411764705882353,
+      "recall": 0.6,
+      "f1": 0.5084745762711864,
+      "support": 25
+    },
+    "UNCERTAIN": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 15
+    }
+  },
+  "confusion_matrix": [
+    [
+      6,
+      0,
+      9,
+      0
+    ],
+    [
+      0,
+      2,
+      3,
+      0
+    ],
+    [
+      10,
+      0,
+      15,
+      0
+    ],
+    [
+      8,
+      0,
+      7,
+      0
+    ]
+  ],
+  "classification_report": {
+    "CONFLICT": {
+      "precision": 0.25,
+      "recall": 0.4,
+      "f1-score": 0.3076923076923077,
+      "support": 15.0
+    },
+    "SUPERSEDED": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1-score": 0.5714285714285714,
+      "support": 5.0
+    },
+    "CONSISTENT": {
+      "precision": 0.4411764705882353,
+      "recall": 0.6,
+      "f1-score": 0.5084745762711864,
+      "support": 25.0
+    },
+    "UNCERTAIN": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 15.0
+    },
+    "accuracy": 0.38333333333333336,
+    "macro avg": {
+      "precision": 0.4227941176470588,
+      "recall": 0.35,
+      "f1-score": 0.3468988638480164,
+      "support": 60.0
+    },
+    "weighted avg": {
+      "precision": 0.3296568627450981,
+      "recall": 0.38333333333333336,
+      "f1-score": 0.3364065313217856,
+      "support": 60.0
+    }
+  },
+  "errors": [
+    {
+      "pack_id": "PACK_001",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5141288042068481,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9973732233047485,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_001_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 65,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_001_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_002",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5372557044029236,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9983141422271729,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_002_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 40,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_002_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 40,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_003",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5529621839523315,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9943302869796753,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_003_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 80,000, effective from 2026-01-01."
+        },
+        {
+          "document_id": "PACK_003_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_004",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.555063009262085,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9982843995094299,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_004_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 50,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_004_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_005",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5696105360984802,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9980592131614685,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_005_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 50,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_005_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_006",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6426151990890503,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8294622302055359,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_006_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_006_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 60,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_007",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6645954847335815,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7888255715370178,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_007_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 65,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_007_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_008",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.63335120677948,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.887933611869812,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_008_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 55,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_008_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 55,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_009",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6646401882171631,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7271022796630859,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_009_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_009_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_010",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6772782802581787,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8584510684013367,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_010_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 70,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_010_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 70,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_011",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6523182392120361,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9515806436538696,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_011_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 50,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_011_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 40,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_012",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6116946339607239,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9151403903961182,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_012_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_012_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_013",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6264367699623108,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9598304629325867,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_013_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_013_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_014",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6221556663513184,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9468069076538086,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_014_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_014_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_017",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4951118528842926,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_017_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_017_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be EUR 55,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_019",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.48677539825439453,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_019_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 40,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_019_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be INR 50,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_020",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4820346534252167,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_020_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be INR 50,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_020_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be INR 65,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_026",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6645954847335815,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7888255715370178,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_026_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 65,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_026_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_027",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6520460844039917,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7266169190406799,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_027_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_027_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 90,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_028",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6806807518005371,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8446612358093262,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_028_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_028_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_029",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6806807518005371,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8446612358093262,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_029_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_029_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_030",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6370440125465393,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8080982565879822,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_030_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_030_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_036",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.43156296014785767,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_036_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be INR 50,000, effective from 2026-01-01."
+        },
+        {
+          "document_id": "PACK_036_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of INR 65,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_037",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.45688802003860474,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_037_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 80,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_037_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 85,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_038",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.479515016078949,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_038_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be INR 80,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_038_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of INR 95,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_039",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.51982581615448,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "entailment",
+        "confidence": 0.8646235466003418,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_039_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be EUR 80,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_039_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 85,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_040",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5225486755371094,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "entailment",
+        "confidence": 0.43828535079956055,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_040_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 65,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_040_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 75,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_051",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5006805062294006,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9871045351028442,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_051_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be INR 50,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_051_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_052",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5616798400878906,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9919512271881104,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_052_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be USD 50,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_052_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is USD 60,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_053",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5281527042388916,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9906544089317322,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_053_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be USD 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_053_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is USD 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_054",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4944898784160614,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_054_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 40,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_054_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_055",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.47117429971694946,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_055_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_055_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_056",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5900695323944092,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_056_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_056_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 60,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_057",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5846941471099854,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_057_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 50,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_057_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_058",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5677962899208069,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_058_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 95,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_058_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 95,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_059",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6441372632980347,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_059_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to EUR 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_059_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_060",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5974321365356445,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_060_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to INR 55,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_060_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 55,000 for monthly services."
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "pack_id": "PACK_001",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5141288042068481,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9973732233047485,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_001_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 65,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_001_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_002",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5372557044029236,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9983141422271729,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_002_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 40,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_002_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 40,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_003",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5529621839523315,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9943302869796753,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_003_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 80,000, effective from 2026-01-01."
+        },
+        {
+          "document_id": "PACK_003_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_004",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.555063009262085,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9982843995094299,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_004_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 50,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_004_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_005",
+      "scenario": "matching_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5696105360984802,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9980592131614685,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_005_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 50,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_005_DOC_02",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_006",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6426151990890503,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8294622302055359,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_006_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_006_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 60,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_007",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6645954847335815,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7888255715370178,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_007_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 65,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_007_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_008",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.63335120677948,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.887933611869812,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_008_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 55,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_008_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 55,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_009",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6646401882171631,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7271022796630859,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_009_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_009_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_010",
+      "scenario": "valid_amended_invoice",
+      "actual": "CONSISTENT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6772782802581787,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8584510684013367,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_010_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 70,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_010_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 70,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_011",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6523182392120361,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9515806436538696,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_011_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 50,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_011_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 40,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_012",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6116946339607239,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9151403903961182,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_012_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_012_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_013",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6264367699623108,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9598304629325867,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_013_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_013_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_014",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6221556663513184,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "neutral",
+        "confidence": 0.9468069076538086,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_014_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_014_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_015",
+      "scenario": "stale_invoice_after_amendment",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6301039457321167,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.5020185112953186,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_015_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 75,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_015_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_016",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "SUPERSEDED",
+      "comparison": {
+        "similarity": 0.5287220478057861,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "PRECEDENCE_ESTABLISHED",
+        "precedence_details": {
+          "higher_priority": "PACK_016_DOC_02",
+          "lower_priority": "PACK_016_DOC_01",
+          "reason": "Signed amendment explicitly modifies original document"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9939898252487183,
+        "potential_conflict": false,
+        "requires_review": true,
+        "reason": "A signed amendment establishes document priority. Review whether it modifies this specific clause."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_016_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be EUR 40,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_016_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be EUR 55,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_017",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4951118528842926,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_017_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_017_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be EUR 55,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_018",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "SUPERSEDED",
+      "comparison": {
+        "similarity": 0.509184718132019,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "PRECEDENCE_ESTABLISHED",
+        "precedence_details": {
+          "higher_priority": "PACK_018_DOC_02",
+          "lower_priority": "PACK_018_DOC_01",
+          "reason": "Signed amendment explicitly modifies original document"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9908916354179382,
+        "potential_conflict": false,
+        "requires_review": true,
+        "reason": "A signed amendment establishes document priority. Review whether it modifies this specific clause."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_018_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Silverline Industries Ltd to Vertex Consulting Pvt Ltd shall be USD 50,000, effective from 2026-03-01."
+        },
+        {
+          "document_id": "PACK_018_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be USD 65,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_019",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.48677539825439453,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_019_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 40,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_019_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be INR 50,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_020",
+      "scenario": "explicit_supersession",
+      "actual": "SUPERSEDED",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4820346534252167,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_020_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be INR 50,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_020_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "This signed amendment expressly replaces Clause AGR-FEE-01. The monthly fee shall be INR 65,000 from 2026-10-01."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_021",
+      "scenario": "future_effective_amendment",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6229678988456726,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_021_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-12-01, the monthly service fee shall change to INR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_021_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_022",
+      "scenario": "future_effective_amendment",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6455302238464355,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_022_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-12-01, the monthly service fee shall change to INR 70,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_022_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_023",
+      "scenario": "future_effective_amendment",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.663066029548645,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_023_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-12-01, the monthly service fee shall change to EUR 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_023_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_024",
+      "scenario": "future_effective_amendment",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6509889364242554,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_024_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-12-01, the monthly service fee shall change to EUR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_024_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_025",
+      "scenario": "future_effective_amendment",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6747457385063171,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_025_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-12-01, the monthly service fee shall change to EUR 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_025_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_026",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6645954847335815,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7888255715370178,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_026_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 65,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_026_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 65,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_027",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6520460844039917,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.7266169190406799,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_027_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to INR 90,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_027_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 90,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_028",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6806807518005371,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8446612358093262,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_028_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_028_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_029",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6806807518005371,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8446612358093262,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_029_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to EUR 80,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_029_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 80,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_030",
+      "scenario": "unsigned_amendment",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.6370440125465393,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.8080982565879822,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_030_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from 2026-10-01, the monthly service fee shall change to USD 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_030_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_031",
+      "scenario": "separate_project_scopes",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.43148884177207947,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_031_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 65,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_031_DOC_02",
+          "clause_id": "SOW-FEE-01",
+          "text": "For Project Delta only, the parties agree to a separate project fee of EUR 80,000. This fee applies only to Project Delta."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_032",
+      "scenario": "separate_project_scopes",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4547436833381653,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_032_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 65,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_032_DOC_02",
+          "clause_id": "SOW-FEE-01",
+          "text": "For Project Delta only, the parties agree to a separate project fee of INR 80,000. This fee applies only to Project Delta."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_033",
+      "scenario": "separate_project_scopes",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4459158778190613,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_033_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 50,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_033_DOC_02",
+          "clause_id": "SOW-FEE-01",
+          "text": "For Project Delta only, the parties agree to a separate project fee of INR 60,000. This fee applies only to Project Delta."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_034",
+      "scenario": "separate_project_scopes",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.48059743642807007,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_034_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be EUR 40,000, effective from 2026-03-01."
+        },
+        {
+          "document_id": "PACK_034_DOC_02",
+          "clause_id": "SOW-FEE-01",
+          "text": "For Project Delta only, the parties agree to a separate project fee of EUR 55,000. This fee applies only to Project Delta."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_035",
+      "scenario": "separate_project_scopes",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.43294504284858704,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_035_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Silverline Industries Ltd to Vertex Consulting Pvt Ltd shall be INR 40,000, effective from 2026-03-01."
+        },
+        {
+          "document_id": "PACK_035_DOC_02",
+          "clause_id": "SOW-FEE-01",
+          "text": "For Project Delta only, the parties agree to a separate project fee of INR 50,000. This fee applies only to Project Delta."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_036",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.43156296014785767,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_036_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be INR 50,000, effective from 2026-01-01."
+        },
+        {
+          "document_id": "PACK_036_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of INR 65,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_037",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.45688802003860474,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_037_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 80,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_037_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 85,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_038",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.479515016078949,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_038_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be INR 80,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_038_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of INR 95,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_039",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.51982581615448,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "entailment",
+        "confidence": 0.8646235466003418,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_039_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be EUR 80,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_039_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 85,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_040",
+      "scenario": "incorrect_purchase_order",
+      "actual": "CONFLICT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5225486755371094,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "entailment",
+        "confidence": 0.43828535079956055,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "No direct conflict detected; this is a model-assisted result, not legal advice."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_040_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be EUR 65,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_040_DOC_02",
+          "clause_id": "PO-FEE-01",
+          "text": "Purchase order for general services authorizes a monthly amount of EUR 75,000."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_041",
+      "scenario": "separate_sow_obligation",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.14068476855754852,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_041_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be USD 80,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_041_DOC_02",
+          "clause_id": "SOW-OBL-01",
+          "text": "The supplier shall provide a quarterly security assessment and submit a written report within ten business days."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_042",
+      "scenario": "separate_sow_obligation",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.2652016282081604,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_042_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Cedar Labs Pvt Ltd to Northstar Solutions Ltd shall be INR 65,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_042_DOC_02",
+          "clause_id": "SOW-OBL-01",
+          "text": "The supplier shall provide a quarterly security assessment and submit a written report within ten business days."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_043",
+      "scenario": "separate_sow_obligation",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.2691773474216461,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_043_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 50,000, effective from 2026-01-01."
+        },
+        {
+          "document_id": "PACK_043_DOC_02",
+          "clause_id": "SOW-OBL-01",
+          "text": "The supplier shall provide a quarterly security assessment and submit a written report within ten business days."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_044",
+      "scenario": "separate_sow_obligation",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.21600928902626038,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_044_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 40,000, effective from 2026-03-01."
+        },
+        {
+          "document_id": "PACK_044_DOC_02",
+          "clause_id": "SOW-OBL-01",
+          "text": "The supplier shall provide a quarterly security assessment and submit a written report within ten business days."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_045",
+      "scenario": "separate_sow_obligation",
+      "actual": "CONSISTENT",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.19999834895133972,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_045_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be EUR 50,000, effective from 2026-06-01."
+        },
+        {
+          "document_id": "PACK_045_DOC_02",
+          "clause_id": "SOW-OBL-01",
+          "text": "The supplier shall provide a quarterly security assessment and submit a written report within ten business days."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_046",
+      "scenario": "conflicting_delivery_dates",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.9061794281005859,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9934626817703247,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_046_DOC_02",
+          "clause_id": "SOW-DATE-01",
+          "text": "The final project deliverable must be submitted by 2026-09-15."
+        },
+        {
+          "document_id": "PACK_046_DOC_03",
+          "clause_id": "PO-DATE-01",
+          "text": "The final project deliverable is required by 2026-09-30."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_047",
+      "scenario": "conflicting_delivery_dates",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.9061794281005859,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9934626817703247,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_047_DOC_02",
+          "clause_id": "SOW-DATE-01",
+          "text": "The final project deliverable must be submitted by 2026-09-15."
+        },
+        {
+          "document_id": "PACK_047_DOC_03",
+          "clause_id": "PO-DATE-01",
+          "text": "The final project deliverable is required by 2026-09-30."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_048",
+      "scenario": "conflicting_delivery_dates",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.9061794281005859,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9934626817703247,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_048_DOC_02",
+          "clause_id": "SOW-DATE-01",
+          "text": "The final project deliverable must be submitted by 2026-09-15."
+        },
+        {
+          "document_id": "PACK_048_DOC_03",
+          "clause_id": "PO-DATE-01",
+          "text": "The final project deliverable is required by 2026-09-30."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_049",
+      "scenario": "conflicting_delivery_dates",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.9061794281005859,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9934626817703247,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_049_DOC_02",
+          "clause_id": "SOW-DATE-01",
+          "text": "The final project deliverable must be submitted by 2026-09-15."
+        },
+        {
+          "document_id": "PACK_049_DOC_03",
+          "clause_id": "PO-DATE-01",
+          "text": "The final project deliverable is required by 2026-09-30."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_050",
+      "scenario": "conflicting_delivery_dates",
+      "actual": "CONFLICT",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.9061794281005859,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9934626817703247,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_050_DOC_02",
+          "clause_id": "SOW-DATE-01",
+          "text": "The final project deliverable must be submitted by 2026-09-15."
+        },
+        {
+          "document_id": "PACK_050_DOC_03",
+          "clause_id": "PO-DATE-01",
+          "text": "The final project deliverable is required by 2026-09-30."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_051",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5006805062294006,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9871045351028442,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_051_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be INR 50,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_051_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_052",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5616798400878906,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9919512271881104,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_052_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be USD 50,000, effective from 2026-02-01."
+        },
+        {
+          "document_id": "PACK_052_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is USD 60,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_053",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONFLICT",
+      "comparison": {
+        "similarity": 0.5281527042388916,
+        "temporal_status": "BOTH_APPLICABLE",
+        "scope_status": "SAME_SCOPE",
+        "precedence_status": "INSUFFICIENT_INFORMATION",
+        "precedence_details": {
+          "higher_priority": null,
+          "lower_priority": null,
+          "reason": "Insufficient precedence information"
+        },
+        "nli_label": "contradiction",
+        "confidence": 0.9906544089317322,
+        "potential_conflict": true,
+        "requires_review": false,
+        "reason": "NLI detected a potential contradiction without an established precedence relationship."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_053_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Maple Retail Pvt Ltd to Orion Digital Services Ltd shall be USD 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_053_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is USD 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_054",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.4944898784160614,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_054_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Greenfield Logistics Pvt Ltd to Summit Software Ltd shall be INR 40,000, effective from 2026-05-01."
+        },
+        {
+          "document_id": "PACK_054_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_055",
+      "scenario": "ambiguous_precedence",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.47117429971694946,
+        "temporal_status": "NOT_CHECKED",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "Clauses are not sufficiently related."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_055_DOC_01",
+          "clause_id": "AGR-FEE-01",
+          "text": "The monthly service fee payable by Bluepeak Technologies Pvt Ltd to Aster Systems Pvt Ltd shall be INR 50,000, effective from 2026-04-01."
+        },
+        {
+          "document_id": "PACK_055_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "The monthly fee is INR 55,000. This document does not state whether it replaces the earlier fee clause."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_056",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5900695323944092,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_056_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 60,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_056_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 60,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_057",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5846941471099854,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_057_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 50,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_057_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 50,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_058",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5677962899208069,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_058_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to USD 95,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_058_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges USD 95,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_059",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.6441372632980347,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_059_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to EUR 85,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_059_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges EUR 85,000 for monthly services."
+        }
+      ]
+    },
+    {
+      "pack_id": "PACK_060",
+      "scenario": "ambiguous_effective_date",
+      "actual": "UNCERTAIN",
+      "predicted": "CONSISTENT",
+      "comparison": {
+        "similarity": 0.5974321365356445,
+        "temporal_status": "ONLY_ONE_APPLICABLE",
+        "scope_status": "NOT_CHECKED",
+        "precedence_status": "NOT_CHECKED",
+        "nli_label": null,
+        "confidence": null,
+        "potential_conflict": false,
+        "requires_review": false,
+        "reason": "The clauses do not apply during the same period."
+      },
+      "evidence": [
+        {
+          "document_id": "PACK_060_DOC_02",
+          "clause_id": "AMD-FEE-01",
+          "text": "With effect from To be agreed by the parties, the monthly service fee shall change to INR 55,000. All other terms remain unchanged."
+        },
+        {
+          "document_id": "PACK_060_DOC_03",
+          "clause_id": "INV-FEE-01",
+          "text": "Invoice dated 2026-10-15 charges INR 55,000 for monthly services."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic data has 60 packs and cannot establish real-world generalization.",
+    "This protocol supplies annotated evidence, so retrieval performance is excluded."
+  ]
+}

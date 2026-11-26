@@ -1,0 +1,11 @@
+torch==2.15.0
+transformers==5.23.0
+datasets==5.2.0
+sentence-transformers
+scikit-learn==1.9.1
+PyMuPDF
+python-docx
+fastapi
+uvicorn[standard]
+python-multipart
+pytest

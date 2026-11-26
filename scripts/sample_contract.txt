@@ -1,0 +1,24 @@
+
+SERVICE AGREEMENT
+
+Agreement ID: AGR-001
+First Party: ABC Technologies
+Second Party: XYZ Solutions
+
+Effective Date: 2026-01-01
+Expiry Date: 2026-12-31
+Status: Signed
+
+1. Definitions
+This agreement establishes the terms between the parties.
+
+2. Payment Terms
+The customer shall pay INR 50,000 every month.
+
+3. Confidentiality
+Both parties shall maintain confidentiality
+of all shared information.
+
+4. Termination
+Either party may terminate this agreement
+with 30 days written notice.

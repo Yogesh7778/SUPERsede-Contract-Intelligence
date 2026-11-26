@@ -1,0 +1,237 @@
+{
+  "protocol": "Evidence spans center positive examples; no-evidence documents use coverage windows with conservative document aggregation. This is an approximation of document-level ContractNLI.",
+  "model": "cross-encoder/nli-deberta-v3-small",
+  "device": "mps",
+  "max_length": 256,
+  "split": "dev",
+  "records": 48,
+  "metrics": {
+    "accuracy": 0.3958333333333333,
+    "macro_precision": 0.5006568144499179,
+    "macro_recall": 0.3958333333333333,
+    "macro_f1": 0.3862433862433862,
+    "weighted_f1": 0.3862433862433862,
+    "per_class": {
+      "Entailment": {
+        "precision": 0.8,
+        "recall": 0.25,
+        "f1": 0.38095238095238093,
+        "support": 16
+      },
+      "Contradiction": {
+        "precision": 0.35714285714285715,
+        "recall": 0.3125,
+        "f1": 0.3333333333333333,
+        "support": 16
+      },
+      "NotMentioned": {
+        "precision": 0.3448275862068966,
+        "recall": 0.625,
+        "f1": 0.4444444444444444,
+        "support": 16
+      }
+    },
+    "classification_report": {
+      "Entailment": {
+        "precision": 0.8,
+        "recall": 0.25,
+        "f1-score": 0.38095238095238093,
+        "support": 16.0
+      },
+      "Contradiction": {
+        "precision": 0.35714285714285715,
+        "recall": 0.3125,
+        "f1-score": 0.3333333333333333,
+        "support": 16.0
+      },
+      "NotMentioned": {
+        "precision": 0.3448275862068966,
+        "recall": 0.625,
+        "f1-score": 0.4444444444444444,
+        "support": 16.0
+      },
+      "accuracy": 0.3958333333333333,
+      "macro avg": {
+        "precision": 0.5006568144499179,
+        "recall": 0.3958333333333333,
+        "f1-score": 0.3862433862433862,
+        "support": 48.0
+      },
+      "weighted avg": {
+        "precision": 0.5006568144499179,
+        "recall": 0.3958333333333333,
+        "f1-score": 0.3862433862433862,
+        "support": 48.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        4,
+        3,
+        9
+      ],
+      [
+        1,
+        5,
+        10
+      ],
+      [
+        0,
+        6,
+        10
+      ]
+    ],
+    "labels": [
+      "Entailment",
+      "Contradiction",
+      "NotMentioned"
+    ]
+  },
+  "misclassified": [
+    {
+      "example_id": "contractnli_dev_81_nda-18",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_205_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_598_nda-1",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_563_nda-1",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_9_nda-4",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_33_nda-15",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_33_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_435_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_64_nda-19",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_406_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_29_nda-13",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_54_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_488_nda-8",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_81_nda-15",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_44_nda-20",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_9_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_20_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_45_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_28_nda-2",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_590_nda-5",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_575_nda-17",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_575_nda-20",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_411_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_20_nda-7",
+      "prediction": "Contradiction",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_405_nda-2",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_69_nda-18",
+      "prediction": "Contradiction",
+      "label": "NotMentioned"
+    },
+    {
+      "example_id": "contractnli_dev_478_nda-1",
+      "prediction": "Entailment",
+      "label": "Contradiction"
+    },
+    {
+      "example_id": "contractnli_dev_563_nda-19",
+      "prediction": "NotMentioned",
+      "label": "Entailment"
+    },
+    {
+      "example_id": "contractnli_dev_32_nda-7",
+      "prediction": "NotMentioned",
+      "label": "Contradiction"
+    }
+  ]
+}

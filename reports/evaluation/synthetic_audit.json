@@ -1,0 +1,11 @@
+{
+  "packs": 60,
+  "labels": {
+    "CONSISTENT": 25,
+    "CONFLICT": 15,
+    "SUPERSEDED": 5,
+    "UNCERTAIN": 15
+  },
+  "evidence_reference_failures": [],
+  "note": "This is a data-integrity audit, not a performance claim. Use the held-out packs only for final pipeline evaluation."
+}
