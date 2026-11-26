@@ -1,0 +1,15 @@
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+import { Bell, BookOpenCheck, Boxes, ChevronRight, FileSearch, FolderKanban, Home, Menu, Moon, Scale, Search, Settings, ShieldCheck, Sun, UploadCloud, X } from 'lucide-react'
+import { useApp } from './context/AppContext'
+
+const nav = [
+  ['Dashboard', '/', Home], ['Document Packs', '/packs', FolderKanban], ['Upload Documents', '/upload', UploadCloud], ['Compare Documents', '/compare', Boxes], ['Conflict Analysis', '/analysis', FileSearch], ['Evidence Viewer', '/evidence', BookOpenCheck], ['Settings', '/settings', Settings],
+]
+export function Brand() { return <div className="brand"><div className="brand-mark"><Scale size={22}/></div><div><b>SUPER<span>Sede</span></b><small>Contract intelligence</small></div></div> }
+export function Sidebar({ open, close }) { return <aside className={`sidebar ${open ? 'open' : ''}`}><Brand/><nav>{nav.map(([label, to, Icon]) => <NavLink key={to} to={to} end={to === '/'} onClick={close}><Icon size={18}/><span>{label}</span><ChevronRight size={15} className="nav-arrow"/></NavLink>)}</nav><div className="side-card"><ShieldCheck size={20}/><b>Evidence-driven AI</b><p>Every finding is tied to source clauses for informed legal review.</p></div></aside> }
+export function Layout({ children }) { const [open, setOpen] = useState(false); const { theme, setTheme, packs } = useApp(); const location = useLocation(); useEffect(() => setOpen(false), [location]); return <div className="app-shell"><Sidebar open={open} close={() => setOpen(false)}/>{open && <button className="scrim" aria-label="Close menu" onClick={() => setOpen(false)}/>}<main className="workspace"><header className="topbar"><button className="icon-btn mobile-menu" onClick={() => setOpen(true)} aria-label="Open menu"><Menu/></button><div className="search"><Search size={18}/><input aria-label="Search document packs" placeholder="Search document packs" onChange={() => {}}/></div><div className="top-actions"><button className="icon-btn" title="Toggle theme" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <Sun size={19}/> : <Moon size={19}/>}</button><button className="icon-btn notification" title="Notifications"><Bell size={19}/>{packs.length > 0 && <i/>}</button><div className="avatar">YS</div></div></header><div className="content">{children}</div></main></div> }
+export function PageHeader({ eyebrow, title, description, action }) { return <div className="page-heading"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p></div>{action}</div> }
+export function Status({ value }) { return <span className={`status ${String(value || '').toLowerCase()}`}>{value || 'Not analyzed'}</span> }
+export function Empty({ icon: Icon = FolderKanban, title, text, action }) { return <div className="empty"><div className="empty-icon"><Icon size={28}/></div><h3>{title}</h3><p>{text}</p>{action}</div> }
+export function Toast({ message, onClose }) { if (!message) return null; return <div className="toast"><span>{message}</span><button onClick={onClose}><X size={16}/></button></div> }
